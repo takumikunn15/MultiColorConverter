@@ -112,7 +112,7 @@ body main .rgb .container .slider::-moz-range-thumb {
 body main .rgb .container .rgb-color-view {
   width: 300px;
   height: 100%;
-  background-color: red;
+  background-color: #646464;
 }
 
 body main .rgb .container .rgb-color-view p {
