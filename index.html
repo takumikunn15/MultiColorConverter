@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>マルチ色変換器</title>
+  <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+  <link rel="stylesheet" href="./css/master.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header-left">
+        <p>マルチ色変換器</p>
+      </div>
+      <div class="header-right">
+        <p><a href="#">お問い合わせ</a></p>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="rgb">
+      <div class="container">
+        <div class="range-red">
+          <input type="range" class="slider" min="0" max="255" step="1" value="100">
+        </div>
+        <div class="range-green">
+          <input type="range" class="slider" min="0" max="255" step="1" value="100">
+        </div>
+        <div class="range-blue">
+          <input type="range" class="slider" min="0" max="255" step="1" value="100">
+        </div>
+        <div class="rgb-color-view">
+          <p>rgb(<span id="red">100</span>,<span id="green">100</span>,<span id="blue">100</span>)</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script type="text/javascript" src="script/slider.js"></script>
+</body>
+
+</html>
