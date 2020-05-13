@@ -46,16 +46,13 @@ body main .colors .container {
   width: 80%;
 }
 
-body main .colors .container .range-red {
-  width: 100%;
-}
-
-body main .colors .container .range-green {
-  width: 100%;
-}
-
-body main .colors .container .range-blue {
-  width: 100%;
+body main .colors .container span .range-red,
+body main .colors .container range-green,
+body main .colors .container range-blue,
+body main .colors .container range-h,
+body main .colors .container range-s,
+body main .colors .container range-v {
+  display: flex;
 }
 
 body main .colors .container .slider {
@@ -92,14 +89,16 @@ body main .colors .container .slider::-moz-range-thumb {
 body main .colors .container .color-view {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 100px;
+  height: 200px;
   border-radius: 20px;
   background-color: #646464;
 }
 
 body main .colors .container .color-view pre {
   display: inline-block;
-  font-size: 10px;
+  margin: 10px 0 10px 0;
+  font-size: 30px;
 }
