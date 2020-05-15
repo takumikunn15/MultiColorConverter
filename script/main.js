@@ -19,6 +19,7 @@ rgb = [0, 0, 0];
 hs = [0, 0, 0];
 
 let $ = x => document.querySelector(x);
+// let jkk = x => document.querySelectorAll(x);
 let c = (x, s) => $(x).style.backgroundColor = s;
 
 let hsv2rgb = (h, s, v, f = (n, k = (n + h / 60) % 6) => v - v * s * Math.max(Math.min(k, 4 - k, 1), 0)) => [f(5), f(3), f(1)];
@@ -37,12 +38,21 @@ function changeHS(i, e) {
 
 function refresh() {
   rr = rgb.map(x => x * 255 | 0).join(',')
+  ry = rgb.map(x => 255 - x * 255 | 0).join(',')
   tthex = rgb.map(x => x * 255 | 0)
-  ttthex = rgb2Hex(tthex[0],tthex[1],tthex[2])
+  ttthex = rgb2Hex(tthex[0], tthex[1], tthex[2])
   thex = `HEX: ${ttthex}`
   tr = `RGB: ${rr}`
   th = `HSV: ${hs.map((x,i)=>i? (x*100).toFixed(2)+'%':x|0).join(',')}`
   $('.box').style.backgroundColor = `rgb(${rr})`;
+  // let obj = document.getElementsByClassName('.inf');
+  // for (var i = 0; i < obj.length; i++) {
+  //   obj[i].style.color = `rgb(${rr})`;
+  // }
+
+  document.querySelectorAll(".inf")[0].style.color = `rgb(${ry})`;
+  document.querySelectorAll(".inf")[1].style.color = `rgb(${ry})`;
+  document.querySelectorAll(".inf")[2].style.color = `rgb(${ry})`;
   $('.infoHEX').innerHTML = `${thex}`;
   $('.infoRGB').innerHTML = `${tr}`;
   $('.infoHS').innerHTML = `${th}`;
