@@ -8,11 +8,9 @@ function rgb2hsv(r, g, b) {
 function rgb2Hex(r, g, b) {
   return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 }
-// console.log(`rgb: (0.5,0.2,0.3) --> hsv: (${rgb2hsv(0.5,0.2,0.3)})`)
-
 
 // ---------------
-// UX
+// 画面
 // ---------------
 
 rgb = [0, 0, 0];
@@ -37,19 +35,14 @@ function changeHS(i, e) {
 }
 
 function refresh() {
-  rr = rgb.map(x => x * 255 | 0).join(',')
-  ry = rgb.map(x => 255 - x * 255 | 0).join(',')
-  tthex = rgb.map(x => x * 255 | 0)
-  ttthex = rgb2Hex(tthex[0], tthex[1], tthex[2])
-  thex = `HEX: ${ttthex}`
-  tr = `RGB: ${rr}`
-  th = `HSV: ${hs.map((x,i)=>i? (x*100).toFixed(2)+'%':x|0).join(',')}`
+  rr = rgb.map(x => x * 255 | 0).join(',');
+  ry = rgb.map(x => 255 - x * 255 | 0).join(',');
+  tthex = rgb.map(x => x * 255 | 0);
+  ttthex = rgb2Hex(tthex[0], tthex[1], tthex[2]);
+  thex = `HEX: ${ttthex}`;
+  tr = `RGB: ${rr}`;
+  th = `HSV: ${hs.map((x,i)=>i? (x*100).toFixed(2)+'%':x|0).join(',')}`;
   $('.box').style.backgroundColor = `rgb(${rr})`;
-  // let obj = document.getElementsByClassName('.inf');
-  // for (var i = 0; i < obj.length; i++) {
-  //   obj[i].style.color = `rgb(${rr})`;
-  // }
-
   document.querySelectorAll(".inf")[0].style.color = `rgb(${ry})`;
   document.querySelectorAll(".inf")[1].style.color = `rgb(${ry})`;
   document.querySelectorAll(".inf")[2].style.color = `rgb(${ry})`;

@@ -16,29 +16,24 @@
       <div class="header-left">
         <p>マルチ色変換器</p>
       </div>
-      <!-- <div class="header-right">
-        <p><a href="#">お問い合わせ</a></p>
-      </div> -->
+      <div class="header-right">
+        <a href="https://github.com/takumikunn15/MultiColorConverter">GitHub</a>
+      </div>
     </div>
   </header>
   <main>
     <div class="colors">
       <div class="container">
         <div class="range-red">
-          <!-- <input type="range" class="slider red" min="0" max="255" step="1" value="100"> -->
           <input id="r" class="slider" type="range" min="0" max="255" step="1" oninput="changeRGB(0,event)">
         </div>
         <div class="range-green">
-          <!-- <input type="range" class="slider green" min="0" max="255" step="1" value="100"> -->
           <input id="g" class="slider" type="range" min="0" max="255" step="1" oninput="changeRGB(1,event)">
         </div>
         <div class="range-blue">
-          <!-- <input type="range" class="slider blue" min="0" max="255" step="1" value="100"> -->
           <input id="b" class="slider" type="range" min="0" max="255" step="1" oninput="changeRGB(2,event)">
         </div>
         <div class="box color-view">
-          <!-- <div class="box hsl"> -->
-          <!-- <p>rgb(<span id="red">100</span>,<span id="green">100</span>,<span id="blue">100</span>)</p> -->
           <pre class="inf infoHEX"></pre>
 
           <pre class="inf infoRGB"></pre>
@@ -49,25 +44,18 @@
 
       <div class="container">
         <div class="range-h">
-          <!-- <input type="range" class="slider red" min="0" max="255" step="1" value="100"> -->
           <input id="h" class="slider" type="range" min="0" max="360" oninput="changeHS(0,event)">
         </div>
         <div class="range-s">
-          <!-- <input type="range" class="slider green" min="0" max="255" step="1" value="100"> -->
           <input id="s" class="slider" type="range" min="0" max="255" oninput="changeHS(1,event)">
         </div>
         <div class="range-v">
-          <!-- <input type="range" class="slider blue" min="0" max="255" step="1" value="100"> -->
           <input id="v" class="slider" type="range" min="0" max="255" oninput="changeHS(2,event)">
         </div>
-        <!-- <div class="box color-view"> -->
-        <!-- <p>rgb(<span id="red">100</span>,<span id="green">100</span>,<span id="blue">100</span>)</p> -->
-        <!-- <pre class="infoHS"></pre> -->
-        <!-- </div> -->
       </div>
     </div>
   </main>
-  <!-- <script type="text/javascript" src="script/slider.js"></script> -->
+  <script src="https://kit.fontawesome.com/67a3de9edc.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="script/main.js"></script>
 </body>
 

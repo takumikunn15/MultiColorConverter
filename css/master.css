@@ -3,56 +3,48 @@
 }
 
 body header {
+  height: 70px;
   background-color: #656565;
   color: #fff;
+  text-align: center;
 }
 
 body header .container {
+  display: inline-block;
   margin: 0 auto;
   width: 80%;
   height: 70px;
+  line-height: 70px;
+  -ms-user-select: none;
+  /* IE 10+ */
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 body header .container .header-left {
-  display: inline-block;
   float: left;
   font-size: 30px;
-  line-height: 70px;
 }
 
-body header .container .header-right p,
-body header .container a {
+body header .container .header-right a {
   display: inline-block;
   float: right;
+  width: 160px;
+  background-color: rgba(255, 255, 255, 0.3);
   color: #fff;
   text-decoration: none;
-  font-size: 20px;
-  line-height: 70px;
+  font-size: 22px;
 }
 
-body header .container .header-right p a,
-body header .container a a {
-  padding: 0 20px;
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-body header .container .header-right p a:hover,
-body header .container a a:hover {
+body header .container .header-right a:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
 body main .colors .container {
   margin: 0 auto;
   width: 80%;
-}
-
-body main .colors .container span .range-red,
-body main .colors .container range-green,
-body main .colors .container range-blue,
-body main .colors .container range-h,
-body main .colors .container range-s,
-body main .colors .container range-v {
-  display: flex;
 }
 
 body main .colors .container .slider {
@@ -95,10 +87,16 @@ body main .colors .container .color-view {
   height: 200px;
   border-radius: 20px;
   background-color: #646464;
+  -ms-user-select: none;
+  /* IE 10+ */
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 body main .colors .container .color-view pre {
   display: inline-block;
-  margin: 10px 0 10px 0;
+  margin: 10px 0;
   font-size: 30px;
 }

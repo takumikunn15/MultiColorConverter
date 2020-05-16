@@ -6,34 +6,40 @@ $header-height: 70px;
 
 body {
   header {
+    height: $header-height;
     background-color: #656565;
     color: #fff;
+    text-align: center;
 
     .container {
+      display: inline-block;
       margin: 0 auto;
       width: 80%;
       height: $header-height;
+      line-height: $header-height;
+      // 選択不可にする
+
+      -ms-user-select: none;
+      /* IE 10+ */
+      -moz-user-select: -moz-none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+      user-select: none;
+      //ここまで
 
       .header-left {
-        display: inline-block;
         float: left;
         font-size: 30px;
-        line-height: $header-height;
       }
-
-      .header-right p,
-      a {
-        display: inline-block;
-        float: right;
-        color: #fff;
-        text-decoration: none;
-        font-size: 20px;
-        line-height: $header-height;
-
+      .header-right {
         a {
-          padding: 0 20px;
+          display: inline-block;
+          float: right;
+          width: 160px;
           background-color: rgba(#fff,.3);
-
+          color: #fff;
+          text-decoration: none;
+          font-size: 22px;
           &:hover {
             background-color: rgba(#fff,.5);
           }
@@ -47,19 +53,6 @@ body {
       .container {
         margin: 0 auto;
         width: 80%;
-
-        span .range-red,
-        range-green,
-        range-blue,
-        range-h,
-        range-s,
-        range-v {
-          display: flex;
-          // width: 5%;
-          // flex-direction: row;
-          // width:100%;
-        }
-
         .slider {
           margin: 20px auto;
           width: 100%;
@@ -102,10 +95,18 @@ body {
           height: 200px;
           border-radius: 20px;
           background-color: rgba(100,100,100,1);
+          // 選択不可にする
 
+          -ms-user-select: none;
+          /* IE 10+ */
+          -moz-user-select: -moz-none;
+          -khtml-user-select: none;
+          -webkit-user-select: none;
+          user-select: none;
+          //ここまで
           pre {
             display: inline-block;
-            margin: 10px 0 10px 0;
+            margin: 10px 0;
             // padding: 5px 0 5px 0;
             font-size: 30px;
             // height: 100px;
