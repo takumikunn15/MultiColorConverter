@@ -34,11 +34,11 @@
           <input id="b" class="slider" type="range" min="0" max="255" step="1" oninput="changeRGB(2,event)">
         </div>
         <div class="box color-view">
-          <pre class="inf infoHEX"></pre>
+          <pre onclick="copyHEX()"  class="inf infoHEX"></pre>
 
-          <pre class="inf infoRGB"></pre>
+          <pre onclick="copyRGB()" contenteditable="false" class="inf infoRGB"></pre>
 
-          <pre class="inf infoHS"></pre>
+          <pre onclick="copyHSV()" contenteditable="false" class="inf infoHS"></pre>
         </div>
       </div>
 
@@ -55,8 +55,10 @@
       </div>
     </div>
   </main>
-  <script src="https://kit.fontawesome.com/67a3de9edc.js" crossorigin="anonymous"></script>
+  <!-- <script src="https://kit.fontawesome.com/67a3de9edc.js" crossorigin="anonymous"></script> -->
   <script type="text/javascript" src="script/main.js"></script>
+
+  </script>
 </body>
 
 </html>

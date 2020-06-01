@@ -41,7 +41,8 @@ function refresh() {
   ttthex = rgb2Hex(tthex[0], tthex[1], tthex[2]);
   thex = `HEX: ${ttthex}`;
   tr = `RGB: ${rr}`;
-  th = `HSV: ${hs.map((x,i)=>i? (x*100).toFixed(2)+'%':x|0).join(',')}`;
+  hsvSimple = hs.map((x,i)=>i? (x*100).toFixed(2)+'%':x|0).join(',');
+  th = `HSV: ${hsvSimple}`;
   $('.box').style.backgroundColor = `rgb(${rr})`;
   document.querySelectorAll(".inf")[0].style.color = `rgb(${ry})`;
   document.querySelectorAll(".inf")[1].style.color = `rgb(${ry})`;
@@ -59,4 +60,25 @@ function refresh() {
   $('#v').value = hs[2] * 255;
 }
 
+function copyHEX() {
+  navigator.clipboard.writeText(ttthex).then(function() {
+    /* clipboard successfully set */
+  }, function() {
+    /* clipboard write failed */
+  });
+}
+function copyRGB() {
+  navigator.clipboard.writeText(rr).then(function() {
+    /* clipboard successfully set */
+  }, function() {
+    /* clipboard write failed */
+  });
+}
+function copyHSV() {
+  navigator.clipboard.writeText(hsvSimple).then(function() {
+    /* clipboard successfully set */
+  }, function() {
+    /* clipboard write failed */
+  });
+}
 refresh();
